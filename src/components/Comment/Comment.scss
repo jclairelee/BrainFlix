@@ -1,0 +1,138 @@
+@use "../../styles/partials/colors" as cl;
+@use "../../styles/partials/breakpoints" as bk;
+@use "../../styles/partials/global";
+@use "../../styles/partials/fonts";
+
+.comment {
+  flex-wrap: wrap;
+  margin: 0 1rem;
+  padding: 1rem 0rem;
+  border-bottom: 1px solid cl.$dividOutline;
+
+  @include bk.tablet {
+    margin: 0 1.5rem;
+    padding: 1.5rem 0rem;
+  }
+  @include bk.desktop {
+    margin: 0;
+    border-top: 1px solid cl.$dividOutline;
+    border-bottom: none;
+  }
+  @include bk.XL {
+    margin: 0;
+    border-top: 1px solid cl.$dividOutline;
+    border-bottom: none;
+  }
+  &-content {
+    display: flex;
+    &__pic {
+      background-color: cl.$dividOutline;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      @include bk.tablet {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        margin: auto;
+      }
+      @include bk.desktop {
+        margin: auto;
+      }
+      @include bk.XL {
+        margin: auto;
+      }
+    }
+    &-text {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding-left: 1rem;
+      font-size: 0.8125rem;
+      line-height: 1.125rem;
+      @include bk.tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+      }
+    }
+    &__name {
+      color: cl.$primaryText;
+      &-wrapper {
+        flex: 0 0 70%;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        @include bk.tablet {
+          flex: 0 0 85%;
+        }
+        @include bk.desktop {
+          flex: 0 0 90%;
+        }
+        @include bk.XL {
+          flex: 0 0 90%;
+        }
+      }
+    }
+    &__date {
+      color: cl.$secondaryText;
+      &-wrapper {
+        margin-bottom: 0.5rem;
+        flex: 0 0 30%;
+        text-align: right;
+        @include bk.tablet {
+          flex: 0 0 15%;
+          text-align: right;
+        }
+        @include bk.desktop {
+          flex: 0 0 7%;
+        }
+        @include bk.XL {
+          flex: 0 0 7%;
+        }
+      }
+    }
+    &__msg {
+      &-wrapper {
+        color: cl.$primaryText;
+        flex: 0 0 90%;
+        @include bk.tablet {
+          flex: 0 0 95%;
+        }
+        @include bk.desktop {
+          padding-right: 2rem;
+          flex: 0 0 95%;
+        }
+        @include bk.XL {
+          padding-right: 2rem;
+          flex: 0 0 95%;
+        }
+      }
+    }
+    &__icon {
+      &-wrapper {
+        display: none;
+        flex: 0 0 10%;
+        margin: auto auto;
+        padding-left: 0.15rem;
+        @include bk.tablet {
+          margin: auto auto;
+          flex: 0 0 3%;
+        }
+        @include bk.desktop {
+          align-items: center;
+          margin: auto auto;
+          flex: 0 0 3%;
+        }
+        @include bk.XL {
+          align-items: center;
+          margin: auto auto;
+          flex: 0 0 3%;
+        }
+      }
+    }
+  }
+}
+@include bk.tablet {
+  .comment-contnet__pic-wrapper {
+    width: 10%;
+  }
+}

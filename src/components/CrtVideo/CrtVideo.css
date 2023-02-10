@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before {
+  font-family: "AvenirNext LT Pro";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.crtVideo__film {
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .crtVideo__film {
+    background-color: black;
+    margin: 0;
+    padding: 0 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .crtVideo__film {
+    padding: 0 2.25rem;
+    display: flex;
+    justify-content: center;
+    height: 40rem;
+  }
+}
+.crtVideo__film-pic {
+  height: 18rem;
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  aspect-ratio: 16/9;
+}
+@media (min-width: 768px) {
+  .crtVideo__film-pic {
+    height: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .crtVideo__film-pic {
+    width: 80%;
+    justify-content: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}/*# sourceMappingURL=CrtVideo.css.map */

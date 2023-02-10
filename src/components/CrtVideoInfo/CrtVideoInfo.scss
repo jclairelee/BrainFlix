@@ -1,0 +1,144 @@
+@use "../../styles/partials/colors" as cl;
+@use "../../styles/partials/breakpoints" as bk;
+@use "../../styles/partials/global";
+@use "../../styles/partials/fonts";
+
+.crtVideo {
+  &__title {
+    border-bottom: 1px solid cl.$dividOutline;
+    margin: 1.5rem 1rem 0rem 1rem;
+    padding-bottom: 1rem;
+    width: 91%;
+
+    @include bk.tablet {
+      margin: 1.5rem 1rem 1rem 1.5rem;
+      border-bottom: none;
+    }
+    @include bk.desktop {
+      margin: 2.25rem 2.25rem 1.5rem 0rem;
+      padding-bottom: 0;
+    }
+    &--big {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 2rem;
+      @include bk.tablet {
+        font-size: 2.625rem;
+        line-height: 2.75rem;
+      }
+    }
+  }
+  &__details {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0rem;
+    margin: 0rem 1rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    justify-content: space-between;
+    width: 70%;
+    @include bk.tablet {
+      margin: 0rem 1.5rem;
+      padding: 0;
+      width: 94%;
+    }
+    @include bk.desktop {
+      border-bottom: 1px solid cl.$dividOutline;
+      width: 100%;
+      margin: 0;
+    }
+    &::before {
+      border-bottom: 1px solid cl.$dividOutline;
+      position: absolute;
+      content: "";
+      z-index: 1;
+      top: 5rem;
+      width: 130%;
+      @include bk.tablet {
+        top: 2rem;
+        width: 100%;
+      }
+      @include bk.desktop {
+        display: none;
+      }
+    }
+
+    &-text {
+      display: flex;
+      @include bk.tablet {
+        justify-content: right;
+        font-size: 0.875rem;
+        &-R {
+          padding-left: 1.5rem;
+        }
+      }
+
+      &--lighter {
+        color: cl.$secondaryText;
+        padding-bottom: 0.5rem;
+      }
+      &--bold {
+        font-weight: 700;
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    &__text {
+      display: flex;
+      &--right {
+        padding-left: 3rem;
+        @include bk.desktop {
+          flex: 0 0 18rem;
+        }
+        @include bk.XL {
+          flex: 0 0 20rem;
+        }
+      }
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        @include bk.tablet {
+          flex-direction: row;
+        }
+      }
+    }
+    &-img__likes,
+    &-img__views {
+      padding-right: 0.5rem;
+    }
+  }
+  &__description {
+    padding: 1rem 0rem;
+    margin: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    @include bk.tablet {
+      margin: 0 1.5rem;
+      line-height: 1.75rem;
+      font-size: 0.9rem;
+    }
+    @include bk.desktop {
+      margin: 0rem;
+      padding-right: 1.5rem;
+    }
+
+    &-text {
+      font-size: 0.8125rem;
+      line-height: 1.125rem;
+      font-weight: 400;
+      @include bk.tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-weight: 400;
+        margin: 0 1.5rem;
+      }
+      @include bk.desktop {
+        margin: 0;
+        line-height: 1.75rem;
+        padding-right: 1.5rem;
+      }
+    }
+  }
+}

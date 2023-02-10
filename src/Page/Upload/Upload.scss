@@ -1,0 +1,213 @@
+@use "../../styles/partials/colors" as cl;
+@use "../../styles/partials/breakpoints" as bk;
+@use "../../styles/partials/global";
+@use "../../styles/partials/fonts";
+
+.upload {
+  padding-top: 1rem;
+  border-top: 1px solid cl.$dividOutline;
+
+  &-title {
+    padding-left: 1rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: cl.$primaryText;
+    margin: 2rem 0;
+    @include bk.tablet {
+      margin-left: 1.5rem;
+    }
+    @include bk.desktop {
+      margin-left: 7.5rem;
+      padding: 0;
+    }
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid cl.$dividOutline;
+    width: 100%;
+    @include bk.tablet {
+      margin: 1.5rem 1rem 1rem 1.5rem;
+      border-bottom: 1px solid cl.$dividOutline;
+      border-top: 1px solid cl.$dividOutline;
+      padding-top: 1.5rem;
+      padding-bottom: 0.75rem;
+    }
+    @include bk.desktop {
+      padding-bottom: 0;
+      flex-direction: row;
+      width: 98%;
+      padding-bottom: 0.5rem;
+    }
+    &-form {
+      margin: 1.5rem 1rem 0rem 1rem;
+      @include bk.desktop {
+        margin: auto 6.5rem;
+      }
+    }
+    &-left {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      @include bk.desktop {
+        width: 30%;
+      }
+      &__img {
+        width: 100%;
+        display: flex;
+        background-size: cover;
+        object-fit: cover;
+        background-position: center;
+        height: 17rem;
+        border-radius: 4px;
+        background-color: cl.$dividOutline;
+        background-image: url("../../assets/images/Upload-video-preview.jpg");
+        @include bk.tablet {
+          width: 50%;
+        }
+        @include bk.desktop {
+          width: 98%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position-x: left;
+          margin-top: 0.275rem;
+          height: 11.75rem;
+        }
+      }
+    }
+
+    &-right {
+      @include bk.desktop {
+        width: 70%;
+        padding-left: 1rem;
+      }
+      &__top {
+        display: flex;
+        flex-direction: column;
+        @include bk.desktop {
+        }
+      }
+      &__bottom {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.box {
+  &-label {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    color: cl.$secondaryText;
+    margin-bottom: 0.5rem;
+    @include bk.tablet {
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    }
+  }
+
+  &-input {
+    width: 100%;
+    border: 1px solid cl.$dividOutline;
+    background-color: cl.$formBackground;
+    margin-bottom: 1.25rem;
+    padding-left: 1rem;
+
+    &::placeholder {
+      color: cl.$primaryText;
+      padding-left: 1rem;
+    }
+    &__title {
+      min-height: 2.25rem;
+      padding-left: 1rem;
+      @include bk.tablet {
+        min-height: 2.5rem;
+      }
+    }
+    &__detail {
+      width: 100%;
+      height: 8rem;
+      border-radius: 4px;
+
+      @include bk.tablet {
+        height: 2.5rem;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  background-color: cl.$primaryCTA;
+  color: cl.$primaryBackground;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  height: 2.5rem;
+  width: 100%;
+  font-weight: bold;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+  position: relative;
+  @include bk.tablet {
+    width: 150px;
+    padding: 0 32px;
+  }
+  &-wrapper {
+    width: 100%;
+    @include bk.tablet {
+      width: 150px;
+    }
+  }
+  &-icon {
+    height: 1.25rem;
+    position: absolute;
+    z-index: 2;
+    left: 0.75rem;
+  }
+  &-cancel {
+    color: cl.$primaryCTA;
+    width: 100%;
+    height: 2.5rem;
+    font-weight: bold;
+    font-size: 0.75rem;
+    background-color: cl.$primaryBackground;
+    border: none;
+    @include bk.tablet {
+      width: 150px;
+      padding: 0 32px;
+    }
+    &-wrapper {
+      display: flex;
+      width: 100%;
+      padding-left: 1rem;
+      @include bk.tablet {
+        width: 150px;
+        margin-top: 0.5rem;
+        padding: 0 32px;
+      }
+    }
+  }
+}
+.buttons {
+  @include bk.tablet {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    gap: 2.5rem;
+  }
+}
+#description {
+  padding-bottom: 5rem;
+  color: cl.$primaryText;
+  @include bk.tablet {
+    padding-bottom: 3.5rem;
+    height: 6rem;
+  }
+}

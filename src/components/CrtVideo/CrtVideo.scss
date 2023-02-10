@@ -1,0 +1,37 @@
+@use "../../styles/partials/colors" as cl;
+@use "../../styles/partials/breakpoints" as bk;
+@use "../../styles/partials/global";
+@use "../../styles/partials/fonts";
+
+.crtVideo {
+  &__film {
+    margin-top: 1rem;
+
+    @include bk.tablet {
+      background-color: black;
+      margin: 0;
+      padding: 0 1.5rem;
+    }
+    @include bk.desktop {
+      padding: 0 2.25rem;
+      display: flex;
+      justify-content: center;
+      height: 40rem;
+    }
+    &-pic {
+      height: 18rem;
+      width: 100%;
+      object-fit: fill;
+      aspect-ratio: 16/9;
+
+      @include bk.tablet {
+        height: 100%;
+      }
+      @include bk.desktop {
+        width: 80%;
+        justify-content: center;
+        object-fit: cover;
+      }
+    }
+  }
+}

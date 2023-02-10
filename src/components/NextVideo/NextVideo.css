@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before {
+  font-family: "AvenirNext LT Pro";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.nextVideo {
+  margin: 1rem;
+}
+@media (min-width: 768px) {
+  .nextVideo {
+    margin: 1.5rem;
+  }
+}
+.nextVideo__title {
+  color: #afafaf;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.125rem;
+}
+@media (min-width: 768px) {
+  .nextVideo__title {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    margin-bottom: 1.5rem;
+  }
+}
+.nextVideo__content {
+  display: flex;
+}
+.nextVideo__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 4rem;
+}
+@media (min-width: 1280px) {
+  .nextVideo__img {
+    width: 8rem;
+    height: 5rem;
+  }
+}
+.nextVideo__img-wrapper {
+  height: 4rem;
+  background-color: #e1e1e1;
+  margin-bottom: 1rem;
+}
+@media (min-width: 1280px) {
+  .nextVideo__img-wrapper {
+    margin-bottom: 2.25rem;
+  }
+}
+.nextVideo__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.nextVideo__text-wrapper-title {
+  padding-left: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+  .nextVideo__text-wrapper-title {
+    padding-left: 1.5rem;
+    width: 75%;
+    font-size: 0.875rem;
+  }
+}
+.nextVideo__text-wrapper-channel {
+  padding-left: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .nextVideo__text-wrapper-channel {
+    padding-left: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}/*# sourceMappingURL=NextVideo.css.map */

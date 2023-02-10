@@ -1,0 +1,139 @@
+*,
+*::after,
+*::before {
+  font-family: "AvenirNext LT Pro";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.comment {
+  flex-wrap: wrap;
+  margin: 0 1rem;
+  padding: 1rem 0rem;
+  border-top: 1px solid #e1e1e1;
+}
+@media (min-width: 768px) {
+  .comment {
+    margin: 0 1.5rem;
+    padding: 1.5rem 0rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment {
+    margin: 0;
+  }
+}
+.comment-content {
+  display: flex;
+}
+.comment-content__pic {
+  background-color: #e1e1e1;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  .comment-content__pic {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .comment-content__pic {
+    margin: auto;
+  }
+}
+.comment-content-text {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media (min-width: 768px) {
+  .comment-content-text {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+.comment-content__name {
+  color: #323232;
+}
+.comment-content__name-wrapper {
+  flex: 0 0 70%;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .comment-content__name-wrapper {
+    flex: 0 0 85%;
+  }
+}
+@media (min-width: 1280px) {
+  .comment-content__name-wrapper {
+    flex: 0 0 90%;
+  }
+}
+.comment-content__date {
+  color: #afafaf;
+}
+.comment-content__date-wrapper {
+  margin-bottom: 0.5rem;
+  flex: 0 0 30%;
+  text-align: right;
+}
+@media (min-width: 768px) {
+  .comment-content__date-wrapper {
+    flex: 0 0 15%;
+    text-align: right;
+  }
+}
+@media (min-width: 1280px) {
+  .comment-content__date-wrapper {
+    flex: 0 0 7%;
+  }
+}
+.comment-content__msg-wrapper {
+  color: #323232;
+  flex: 0 0 100%;
+}
+@media (min-width: 768px) {
+  .comment-content__msg-wrapper {
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment-content__msg-wrapper {
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .comment-contnet__pic-wrapper {
+    width: 10%;
+  }
+}/*# sourceMappingURL=Comment.css.map */

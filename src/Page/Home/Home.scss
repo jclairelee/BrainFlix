@@ -1,0 +1,26 @@
+@use "../../styles//partials/colors" as cl;
+@use "../../styles/partials/breakpoints" as bk;
+@use "../../styles/partials/global";
+@use "../../styles/partials/fonts";
+
+.App {
+  display: flex;
+  flex-direction: column;
+  @include bk.desktop {
+    &Bottom {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      &__left {
+        width: 60%;
+        padding-left: 7.5rem;
+      }
+      &__right {
+        width: 40%;
+        padding-top: 2.25rem;
+        padding-right: 3rem;
+        border-left: 2px solid cl.$dividOutline;
+      }
+    }
+  }
+}

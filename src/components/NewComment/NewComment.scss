@@ -1,0 +1,172 @@
+@use "../../styles/partials/colors" as cl;
+@use "../../styles/partials/breakpoints" as bk;
+@use "../../styles/partials/global";
+@use "../../styles/partials/fonts";
+.newComment {
+  position: relative;
+  &::after {
+    border-bottom: 1px solid cl.$dividOutline;
+    position: absolute;
+    content: " ";
+    z-index: 0;
+    width: 92%;
+    display: flex;
+    justify-content: center;
+    margin: 0 1rem;
+    @include bk.tablet {
+      width: 95%;
+    }
+    @include bk.desktop {
+      visibility: none;
+    }
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    @include bk.tablet {
+      margin-bottom: 1rem;
+    }
+
+    &__header {
+      font-size: 0.8125rem;
+      line-height: 1.125rem;
+      padding-bottom: 1rem;
+      margin: 0 1rem;
+      font-weight: 400;
+      @include bk.tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        margin-top: 1rem;
+      }
+      @include bk.desktop {
+        margin-top: 1.5rem;
+        margin-left: 0;
+      }
+    }
+    &__new-comment {
+      display: flex;
+      width: 100%;
+    }
+    &__cmt {
+      width: 100%;
+      @include bk.tablet {
+        padding-left: 1rem;
+      }
+      &-title {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: cl.$secondaryText;
+        @include bk.tablet {
+          font-size: 0.875rem;
+          line-height: 1.375rem;
+        }
+      }
+      &-msg {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        position: relative;
+        width: 100%;
+        @include bk.tablet {
+          padding-right: 1.5rem;
+        }
+        input[type="text"] {
+          border: 1px solid cl.$dividOutline;
+          background-color: cl.$formBackground;
+          color: cl.$primaryText;
+          padding: 0 0 5rem 1rem;
+
+          @include bk.tablet {
+            padding: 0 0 0 1.5rem;
+            font-size: 0.875rem;
+          }
+        }
+        ::placeholder {
+          color: cl.$primaryText;
+        }
+        &-textarea {
+          width: 95%;
+          height: 8rem;
+          padding: 0 0 0 2.25rem;
+          margin: 0.5rem 0 1rem 0rem;
+          border-radius: 4px;
+          @include bk.tablet {
+            height: 2.5rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+    &__btn {
+      display: flex;
+      background-color: cl.$primaryCTA;
+      color: cl.$primaryBackground;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-radius: 4px;
+      height: 2.5rem;
+      width: 100%;
+      font-weight: bold;
+      font-size: 0.75rem;
+      margin-bottom: 1rem;
+      position: relative;
+      &-wrapper {
+        width: 95%;
+        @include bk.tablet {
+          width: 30%;
+          margin-top: 0.5rem;
+          padding-right: 1.5rem;
+        }
+        @include bk.desktop {
+          width: 40%;
+          margin-top: 0.5rem;
+          padding-right: 1.5rem;
+        }
+      }
+
+      &-icon {
+        height: 1rem;
+        position: absolute;
+        z-index: 2;
+        left: 1rem;
+      }
+    }
+  }
+
+  &__pic {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+    width: 20%;
+    @include bk.tablet {
+      width: 10%;
+      padding-left: 2.25rem;
+      justify-content: center;
+    }
+    @include bk.desktop {
+      padding: 0;
+    }
+    &-img {
+      height: 2.25rem;
+      background-image: url("../../assets/images/Mohan-muruge.jpg");
+      background-size: cover;
+      object-fit: fill;
+      border-radius: 50%;
+      @include bk.mobile {
+        width: 36px;
+        height: 36px;
+      }
+      @include bk.tablet {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  &-field {
+    @include bk.tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

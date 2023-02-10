@@ -1,0 +1,219 @@
+*,
+*::after,
+*::before {
+  font-family: "AvenirNext LT Pro";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.header {
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 1rem;
+}
+.header-logo {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 0 0;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .header-logo {
+    justify-content: left;
+    margin: 0;
+  }
+}
+.header-logo__img {
+  width: 120px;
+  height: 25px;
+}
+.header-form {
+  display: flex;
+}
+.header-search {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  width: 100%;
+}
+.header-search input[type=text] {
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+}
+.header-search ::-moz-placeholder {
+  color: #323232;
+}
+.header-search :-ms-input-placeholder {
+  color: #323232;
+}
+.header-search ::placeholder {
+  color: #323232;
+}
+.header-search-bar {
+  width: 100%;
+  height: 2.25rem;
+  padding: 0 0 0 2.25rem;
+  margin: 1rem 0rem;
+  border-radius: 4px;
+}
+.header-search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 1.55rem;
+  z-index: 1;
+  height: 1rem;
+}
+.header-upload__icon {
+  height: 1.25rem;
+  position: absolute;
+  z-index: 2;
+  left: 0.75rem;
+}
+.header-btn {
+  display: flex;
+  background-color: #0095ff;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  height: 2.5rem;
+  width: 100%;
+  font-weight: bold;
+  font-size: 0.75rem;
+  margin: 1rem auto;
+  position: relative;
+  margin-top: 0rem;
+}
+@media (min-width: 768px) {
+  .header-btn {
+    margin: 1rem auto;
+  }
+}
+.header-btn__link {
+  text-decoration: none;
+}
+.header-user {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 15%;
+}
+.header-user__pic {
+  background-image: url("../../assets/images/Mohan-muruge.jpg");
+  background-size: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .header-user__pic {
+    width: 36px;
+    height: 36px;
+  }
+}
+@media (min-width: 768px) {
+  .header-user__pic {
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-user {
+    width: 13%;
+  }
+  .header > :nth-child(1) {
+    flex: 0 0 100%;
+  }
+  .header > :nth-child(2) {
+    flex: 0 0 87%;
+  }
+  .header > :nth-child(4) {
+    flex: 0 0 100%;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    margin: 0 1.5rem;
+    align-items: center;
+  }
+  .header-logo__img {
+    display: flex;
+    align-items: center;
+  }
+  .header > :nth-child(1) {
+    order: 1;
+    flex: 0 0 33%;
+    justify-content: left;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+  .header > :nth-child(2) {
+    order: 2;
+    flex: 0 0 40%;
+  }
+  .header > :nth-child(3) {
+    order: 4;
+    flex: 0 0 7%;
+    justify-content: right;
+  }
+  .header > :nth-child(4) {
+    order: 3;
+    flex: 0 0 20%;
+    padding-left: 1.5rem;
+  }
+  .header-user__pic {
+    width: 36px;
+    height: 36px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .header-user__pic {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (min-width: 1280px) {
+  .header {
+    margin: 0 7.5rem;
+    align-items: center;
+  }
+  .header > :nth-child(1) {
+    flex: 0 0 55%;
+  }
+  .header > :nth-child(2) {
+    flex: 0 0 25%;
+  }
+  .header > :nth-child(3) {
+    flex: 0 0 5%;
+    justify-content: right;
+  }
+  .header > :nth-child(4) {
+    flex: 0 0 15%;
+    padding-right: 0;
+  }
+}/*# sourceMappingURL=Header.css.map */
