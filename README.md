@@ -1,10 +1,14 @@
 # BrainFlix
 
+BrainFlix project was one of the assignments that I've done at BrainStation, which helped me to understand Sass(style rules, variables, mixins, and etc), Postman, API requests(with the mock API server), and much more. All pages are responsive in different breakpoints such as mobile, tablet and desktop breakpoints.
+
 [Demo link](https://youtu.be/NcOUZOwNINQ)
 
 [Frontend](https://github.com/jclairelee/BrainFlix) | [Backend](https://github.com/jclairelee/Brainflix-API)
 
-BrainFlix project was one of the assignments that I've done at BrainStation, which helped me to understand Sass(style rules, variables, mixins, and etc), Postman, API requests(with the mock API server). All pages are responsive in different breakpoints such as mobile, tablet and desktop breakpoints.
+## Screenshot
+
+![Screenshot](./src/assets/images/brainFlix.jpg)
 
 ## Key Features
 
@@ -26,19 +30,27 @@ BrainFlix project was one of the assignments that I've done at BrainStation, whi
 
 ### Frontend
 
-Install node-module and pakage json files with npm
+1. Install dependencies
 
 ```bash
   npm install
 ```
 
-Run the code with npm
+2. Run the code
 
 ```bash
   npm start
 ```
 
 ### Backend
+
+1. Install dependencies
+
+```bash
+  npm install
+```
+
+2. Run the code
 
 ```bash
 npm start
